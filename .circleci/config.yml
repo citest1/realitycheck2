@@ -14,11 +14,11 @@ jobs:
       - run:
           name: Print the Current Time
           command: date
-# workflows:
-#   version: 2
-#   resource_class_jobs:
-#     jobs:
-#       - build
+workflows:
+  version: 2
+  resource_class_jobs:
+    jobs:
+      - build
   
   
 
