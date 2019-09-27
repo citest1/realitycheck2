@@ -170,6 +170,8 @@ jobs:
          key: v3-file-cache-{{ .BuildNum }}
          paths:
            - ./stuff/thing
+           
+     - run: sleep 1000
 
      - run: rm -rf ./stuff/thing
      - run: sleep 5
