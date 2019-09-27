@@ -171,7 +171,6 @@ jobs:
          paths:
            - ./stuff/thing
            
-     - run: sleep 1000
 
      - run: rm -rf ./stuff/thing
      - run: sleep 5
@@ -231,13 +230,13 @@ workflows:
  feature_jobs:
    jobs:
      - save_and_restore_cache
-#      - contexts:
-#          context: org-global
-#      - multi-contexts:
-#          context: individual-local
-#      - write_workspace
-#      - read_workspace:
-#          requires:
-#            - write_workspace
-#      - artifacts_test_results
+     - contexts:
+         context: org-global
+     - multi-contexts:
+         context: individual-local
+     - write_workspace
+     - read_workspace:
+         requires:
+           - write_workspace
+     - artifacts_test_results
 
